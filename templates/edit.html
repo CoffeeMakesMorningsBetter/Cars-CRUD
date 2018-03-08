@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+
+<form action="{{url_for('show', id=car.id)}}?_method=PATCH" method="POST">
+    <label for="make">Make</label>
+    <input type="text" name="make" value="{{car.make}}">
+    <label for=" model ">Model</label>
+    <input type="text " name="model" value="{{car.model}}">
+    <label for="year">Year</label>
+    <input type="text" name="year" value="{{car.year}}">
+    <input type="submit" value="Update Your Car">
+</form>
+
+{% endblock %}
